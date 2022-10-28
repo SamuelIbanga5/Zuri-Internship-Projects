@@ -6,11 +6,11 @@ from rest_framework import status
 from .serializers import DataSerializer
 from .models import Data
 
-class DataAPIView(generics.ListAPIView):
+class DataAPIView(generics.RetrieveAPIView):
     queryset = Data.objects.all()
     serializer_class = DataSerializer
 
-class GetDataAPIView(generics.ListAPIView):
+class GetDataAPIView(generics.RetrieveAPIView):
     serializer_class = DataSerializer
 
     def get_object(self, pk):
