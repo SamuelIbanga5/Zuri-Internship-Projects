@@ -6,7 +6,6 @@ from rest_framework import status
 from .serializers import DataSerializer
 from .models import Data
 
-
 class DataAPIView(generics.RetrieveAPIView):
     queryset = Data.objects.all()
     serializer_class = DataSerializer
