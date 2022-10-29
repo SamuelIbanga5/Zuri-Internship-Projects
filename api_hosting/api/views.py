@@ -7,7 +7,7 @@ from .serializers import DataSerializer
 from .models import Data
 
 
-class DataAPIView(generics.RetrieveAPIView):
+class DataAPIView(generics.ListAPIView):
     queryset = Data.objects.all()
     serializer_class = DataSerializer
 
